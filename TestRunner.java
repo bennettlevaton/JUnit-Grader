@@ -7,8 +7,7 @@ public class TestRunner {
 		/*
 		 * Change the name of the class to our Test file containing out JUnit Tests
 		 */
-		Result result = JUnitCore.runClasses(ControlFun2TestMaster.class);
-
+		Result result = JUnitCore.runClasses(LoopFunTestMaster.class);
 		/*
 		 * Set variables for deduction per failed test and total Possible Points.
 		 */
@@ -16,6 +15,11 @@ public class TestRunner {
 		final int totalPossible = 100;
 
 		int count = 0; // Counter for deductions
+		if(result.wasSuccessful()) {
+			System.out.println("Perfect JUnit Run!");
+			return;
+		}
+		
 		System.out.println("Methods Failed (If blank, none failed):");
 		for (Failure failure : result.getFailures()) {
 			String name = failure.getTestHeader(); // Get the method name failed
