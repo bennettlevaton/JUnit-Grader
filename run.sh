@@ -1,6 +1,5 @@
 # Created by Bennett Levaton
-# Allows for easy running of C# files
-# Arguments filename
+# Allows for easy testing of JUnit Java files
 javac -cp .:\* *.java
 java -cp .:\* TestRunner > Output.txt
 
