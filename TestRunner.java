@@ -9,7 +9,7 @@ public class TestRunner {
 		/*
 		 * Change the name of the class to our Test file containing out JUnit Tests
 		 */
-		Result result = JUnitCore.runClasses(SortedStringSetTestMaster.class);
+		Result result = JUnitCore.runClasses(YOUR_CLASS_HERE.class);
 		/*
 		 * Set variables for deduction per failed test and total Possible Points.
 		 */
