@@ -9,5 +9,5 @@ while IFS= read -r line; do
     cp ./set-$line/YOUR_TEST_FILE.java .
     bash run.sh
     rm -r set-$line
-done < file.txt
+done < GitHubUserNames.txt
 
