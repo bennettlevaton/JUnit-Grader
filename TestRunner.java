@@ -29,7 +29,7 @@ public class TestRunner {
 			String name = failure.getTestHeader(); // Get the method name failed
 			name = name.substring(0, name.indexOf("(")); // Remove the call name
 			
-			if (name.substring(10, name.length()).equals("testFailed")) {
+			if (name.substring(0, 10).equals("testFailed")) {
                 //Remove testFailed from the name
 				System.out.println(name.substring(10, name.length()));
 			}else {
