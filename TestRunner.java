@@ -9,7 +9,7 @@ public class TestRunner {
 		/*
 		 * Change the name of the class to our Test file containing out JUnit Tests
 		 */
-		Result result = JUnitCore.runClasses(YOUR_CLASS_HERE.class);
+		Result result = JUnitCore.runClasses(SortedStringSetTestMaster.class);
 		/*
 		 * Set variables for deduction per failed test and total Possible Points.
 		 */
@@ -29,12 +29,14 @@ public class TestRunner {
 			String name = failure.getTestHeader(); // Get the method name failed
 			name = name.substring(0, name.indexOf("(")); // Remove the call name
 			
-			if (name.length() > 10) {
-                System.out.println(name); // Remove testFailed header
-				//System.out.println(name.substring(10, name.length())); // Remove testFailed header
+			if (name.substring(10, name.length()).equals("testFailed")) {
+                //Remove testFailed from the name
+				System.out.println(name.substring(10, name.length()));
 			}else {
-				System.out.println(name); // Remove testFailed header
+                // If no testFailed text is present just print failed Method Name
+				System.out.println(name);
 			}
+            //Remove comments if detailed reason on failure of test case is needed
 			//System.out.println("      Reason - " + failure.getMessage());
 			count += deduction;
 		}
@@ -43,7 +45,6 @@ public class TestRunner {
 		System.out.println("Your Point Deduction ---> -" + count);
 		System.out.println("Your Final Score -------> " + (totalPossible - count) + "/" + totalPossible + " ("
 				+ (percent(totalPossible, count) * 100) + "%)");
-		System.out.println("Program Perfect? -------> " + result.wasSuccessful());
         System.out.println();
         System.out.println();
 	}
