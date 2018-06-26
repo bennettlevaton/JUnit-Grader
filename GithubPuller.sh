@@ -1,5 +1,3 @@
-# Created by Bennett Levaton
-# Allows for easy running of Java files
 echo "All Grades" > Output.txt
 echo " " >> Output.txt
 
@@ -11,7 +9,6 @@ while IFS= read -r line; do
     echo $line >> Output.txt
     echo $"---------------------------------------------------" >> Output.txt
     git clone https://github.com/$YOUR_PROGRAM/$PROJECT_NAME-$line.git
-    #Copy Lines needed
     cp ./$PROJECT_NAME-$line/$YOUR_TEST_FILE.java .
     cd $PROJECT_NAME-$line
     DATE=$(git rev-list --format=format:'%ci' --max-count=1 `git rev-parse HEAD`)

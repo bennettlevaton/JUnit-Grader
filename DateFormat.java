@@ -1,4 +1,4 @@
-//Simple date adjuster 
+//Simple date adjuster re formats time to be in non 24 hour format
 public class DateFormat {
 	public static void main(String[] args) {
         System.out.println(args[2] + " " + formatTime(args[3]));
@@ -13,7 +13,7 @@ public class DateFormat {
             am = false;
         }
         String e = "AM";
-        //Thrown Together Fix
+        //Thrown Together Fix will update in later iterations
         if (am == false){
             e = "PM";
         }
