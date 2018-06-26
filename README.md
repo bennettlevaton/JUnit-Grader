@@ -23,14 +23,4 @@
 You're ready to Run!
   
 # Sample Output
-
-UserID
----------------------------------------------------
-2018-06-22 12:00AM
----------------------------------------------------
-Methods Failed:
-TestofJUnit1
-TestofJUnit2
-
-Your Point Deduction ---> -6
-Your Final Score -------> 44/50 (88.0%)
+![Sample Output Image](https://i.imgur.com/pLvicaz.png)
