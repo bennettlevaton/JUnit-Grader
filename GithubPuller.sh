@@ -1,6 +1,6 @@
 # Created by Bennett Levaton
 # Allows for easy running of Java files
-echo "Grades Matrix Set" > Output.txt
+echo "All Grades" > Output.txt
 echo " " >> Output.txt
 
 PROJECT_NAME=" " #The name of your project before special IDs
@@ -14,9 +14,10 @@ while IFS= read -r line; do
     #Copy Lines needed
     cp ./$PROJECT_NAME-$line/$YOUR_TEST_FILE.java .
     cd $PROJECT_NAME-$line
-    git rev-list --format=format:'%ci' --max-count=1 `git rev-parse HEAD`>> ../Output.txt
+    DATE=$(git rev-list --format=format:'%ci' --max-count=1 `git rev-parse HEAD`)
     cd ..
+    Java DateFormat $DATE >> Output.txt
     echo $"---------------------------------------------------" >> Output.txt
     bash run.sh
     rm -r $PROJECT_NAME-$line
-done < gitHubID.txt
+done < GitHubUserNames.txt
