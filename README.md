@@ -2,7 +2,6 @@
   A simple JUnit grader. Runs all JUnit test cases in a given file (Master). Pulling github usernames from a text file line by line. It then clones the repo and runs the specified file name in the directory. Then appends the output and grade for the run into a text file with the failed test cases.
  
 # Known Problems
-  If the program encounters an endless loop it will stall. Pressing Control + C will skip that persons Program running and go to the next persons.
   If a git repository is not created there may be an error.
   
 # How to use
