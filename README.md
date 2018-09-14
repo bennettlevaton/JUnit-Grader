@@ -1,8 +1,5 @@
 # JUnit-Grader
   A simple JUnit grader. Runs all JUnit test cases in a given file (Master). Pulling github usernames from a text file line by line. It then clones the repo and runs the specified file name in the directory. Then appends the output and grade for the run into a text file with the failed test cases.
- 
-# Known Problems
-  If a git repository is not created there may be an error.
   
 # How to use
   1) Open Run.sh and make sure the Output is being sent to the proper file. Default is Output.txt which will be created if it is not already in the folder.
